@@ -1,5 +1,3 @@
-
-
 describe('flipkart add item', () => {
     before(() => {
         browser.url('https://www.flipkart.com/');

@@ -1,7 +1,7 @@
 exports.config = {
 //Browserstack Config
-user: process.env.BROWSERSTACK_USERNAME,
-key: process.env.BROWSERSTACK_ACCESS_KEY,
+//user: process.env.BROWSERSTACK_USERNAME,
+//key: process.env.BROWSERSTACK_ACCESS_KEY,
 
     //
     // ====================
@@ -27,7 +27,7 @@ key: process.env.BROWSERSTACK_ACCESS_KEY,
     
     specs: 
     [
-         './test/specs/**/AmazonWaitMove.js'
+         './test/specs/**/flipkart.js'
     ],
          // Patterns to exclude.
     exclude: 
@@ -122,7 +122,7 @@ key: process.env.BROWSERSTACK_ACCESS_KEY,
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['browserstack'],
+    services: ['chromedriver'],
     
   // services: ['selenim standalone'],    // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -144,19 +144,19 @@ key: process.env.BROWSERSTACK_ACCESS_KEY,
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [
-        ['allure',
-{
-    outputDir:'allure-results',
-},
-],
-['junit', {
-    outputDir: './report',
-    outputFileFormat:function(options) {
-        return `results-${new Date().getTime()}.xml`;
-    }
-},
-],
+    reporters: ['spec'
+  //      ['allure',
+//{
+  //  outputDir:'allure-results',
+//},
+//],
+//['junit', {
+    //outputDir: './report',
+    //outputFileFormat:function(options) {
+        //return `results-${new Date().getTime()}.xml`;
+//  }
+//},
+//],
 ],
 
 
