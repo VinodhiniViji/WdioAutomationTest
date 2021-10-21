@@ -27,7 +27,7 @@ exports.config = {
     
     specs: 
     [
-         './test/specs/**/flipkart.js'
+         './test/specs/**/flipkart2.js'
     ],
          // Patterns to exclude.
     exclude: 
