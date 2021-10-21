@@ -5,8 +5,7 @@ describe('flipkart add item', () => {
 
     });
     it('should add item in cart', async() => {
-       
-        await flipkartP.closeIcon.click(); 
+         await flipkartP.closeIcon.click(); 
         await flipkartP.GroceryBtn.click();
         await flipkartP.pinCodeBtn.click();
         await flipkartP.staplesClk.moveTo();
