@@ -26,6 +26,10 @@ class SearchLap extends Page {
         get brandHp() {
             return $("//div[text()='HP']");
         }
+        get productCount()
+        {
+ return $("//h1[text()='Laptops']/following::span[1]");
+        }
 
    open() {
        super.open('https://www.flipkart.com/');

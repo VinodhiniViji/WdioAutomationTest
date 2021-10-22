@@ -17,6 +17,7 @@ describe('To validate the element', () => {
         await txtSearchBox.setValue('Watches');   
 
 
+        
         //should click the search btn
         const searchbtn = ('//input[@class="btn btn-prim gh-spr"]');    
         await $(searchbtn).click(); 

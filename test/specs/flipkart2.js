@@ -14,15 +14,15 @@ it('should add item in cart', async() => {
     await flipkartP2.valueClk.click();
     await flipkartP2.productvlu.scrollIntoView();
         await flipkartP2.productvlu.waitForDisplayed({timeout:5000});
-        const value1 =  await flipkartP2.productvlu.getText();
+        let rate =  await flipkartP2.productvlu.getText();
         browser.pause(1000);
         //console.log(value1);
-        const value2 = value1.substring(1);
-        const value3 = parseInt(value2);
+         rate = rate.substring(1);
+         rate = parseInt(rate);
         //console.log(value3); 
         //expect(value3).toBeGreaterThanOrEqual(1000);
-        expect(value3).toBeGreaterThan(0);
-        expect(value3).toBeLessThan(1000);
+        expect(rate).toBeGreaterThan(0);
+        expect(rate).toBeLessThan(1000);
 });
    
 });
