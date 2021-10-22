@@ -16,11 +16,13 @@ it('should add item in cart', async() => {
         await flipkartP2.productvlu.waitForDisplayed({timeout:5000});
         const value1 =  await flipkartP2.productvlu.getText();
         browser.pause(1000);
-        console.log(value1);
-    
-    //expect(value1).toBeGreaterThanOrEqual(1000);
-    //expect(value1).toBeGreaterThan(0);
-    //expect(value1).toBeLessThan(1000);
+        //console.log(value1);
+        const value2 = value1.substring(1);
+        const value3 = parseInt(value2);
+        //console.log(value3); 
+        //expect(value3).toBeGreaterThanOrEqual(1000);
+        expect(value3).toBeGreaterThan(0);
+        expect(value3).toBeLessThan(1000);
 });
    
 });
