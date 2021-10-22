@@ -29,6 +29,10 @@ get valueClk()
 {
     return $("//div[@class='_3uDYxP']//option[3]");
 }
+get productvlu()
+{
+    return $("//a[contains(@href,'/eyebogler-color-block-men-round-neck-yellow-t-shirt')]//following::div[8]");
+}
 
 }
 export default new flipkartP2();
